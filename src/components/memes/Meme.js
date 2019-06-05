@@ -9,7 +9,6 @@ function Meme({ url }) {
 
 Meme.propTypes = {
   url: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired
 };
 
 export default Meme;
