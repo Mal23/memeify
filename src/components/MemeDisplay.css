@@ -11,14 +11,14 @@
   }
 
   img {
-    max-width: 400px;
+    max-width: 1000px;
   }
 }
 
 .memeDiv {
   position: relative;
   text-align: center;
-  width: 400px;
+  width: 1000px;
 }
 
 .top {
