@@ -6,7 +6,7 @@ function Memes({ memes }) {
   const memesList = memes.map((meme, i) => {
     return (
       <li key={i}>
-        <Meme url={meme.url} />
+        <Meme id={meme.id} url={meme.url} />
       </li>
     );
   });
