@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import MemeDetail from '../../components/memes/MemeDetail';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, props) => ({
@@ -10,4 +11,4 @@ const mapStateToProps = (state, props) => ({
 
 export default withRouter(connect(
   mapStateToProps
-));
+)(MemeDetail));
