@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import MemeDisplay from '../components/MemeDisplay';
 import TextSelector from '../components/TextSelector';
 import ImageSelector from '../components/ImageSelector';
+import { postMeme } from '../services/memeApi';
 
 export default class Meme extends PureComponent {
   state={
@@ -14,6 +15,11 @@ export default class Meme extends PureComponent {
     this.setState({ [target.name] : target.value });
   }
 
+  saveMemeToDb = event => {
+    event.preventDefault();
+    postMeme(this.state);
+  }
+
   render() {
     const { topText, bottomText, image } = this.state;
 
@@ -22,6 +28,7 @@ export default class Meme extends PureComponent {
       <MemeDisplay topText={topText} bottomText={bottomText} image={image} handleChange={this.handleChange}/>
       <ImageSelector image={image} handleChange={this.handleChange}/>
       <TextSelector topText={topText} bottomText={bottomText} handleChange={this.handleChange}/>
+      <button onClick={this.saveMemeToDb}>Save Meme!</button>
       </>
     );
   }
