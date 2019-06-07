@@ -25,9 +25,9 @@ export default class Meme extends PureComponent {
 
     return (
       <>
-      <MemeDisplay topText={topText} bottomText={bottomText} image={image} handleChange={this.handleChange}/>
       <ImageSelector image={image} handleChange={this.handleChange}/>
       <TextSelector topText={topText} bottomText={bottomText} handleChange={this.handleChange}/>
+      <MemeDisplay topText={topText} bottomText={bottomText} image={image} handleChange={this.handleChange}/>
       <button onClick={this.saveMemeToDb}>Save Meme!</button>
       </>
     );
